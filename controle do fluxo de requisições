@@ -1,0 +1,23 @@
+const express = require('express');
+const app = express();
+
+// Rota estática
+app.get('/', (req, res) => {
+  res.send('Bem-vindo à página inicial!');
+});
+
+// Rota dinâmica usando placeholders
+app.get('/usuarios/:id', (req, res) => {
+  const id = req.params.id;
+  res.send(`Exibindo informações do usuário ${id}`);
+});
+
+// Rota dinâmica usando query
+app.get('/produtos', (req, res) => {
+  const { categoria, preco } = req.query;
+  res.send(`Exibindo lista de produtos da categoria ${categoria}, com preço até ${preco}`);
+});
+
+app.listen(3000, () => {
+  console.log('Servidor iniciado na porta 3000');
+});
