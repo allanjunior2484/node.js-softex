@@ -1,0 +1,10 @@
+A web funciona com base no protocolo cliente-servidor, onde o cliente envia uma solicitação para um servidor e o servidor responde com os dados solicitados. Para criar um projeto em Node.js usando o npm, você pode seguir os seguintes passos:
+
+ja no prompd com tudo instalado deve-se passar os comandos
+ 
+mkdir meu-projeto
+
+cd meu-projeto
+
+npm init
+
