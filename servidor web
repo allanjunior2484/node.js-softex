@@ -1,0 +1,22 @@
+const express = require('express');
+const app = express();
+
+
+app.get('/listar/:numero', (req, res) => {
+  const numero = req.params.numero;
+  
+  if (numero == 10) {
+    res.status(200).send('OK');
+  } else if (numero == 50) {
+    res.status(404).send('Not Found');
+  } else if (numero == 500) {
+    res.status(500).send('Internal Server Error');
+  } else {
+    res.status(400).send('Bad Request');
+  }
+});
+
+// Iniciar o servidor
+app.listen(3000, () => {
+  console.log('Servidor iniciado na porta 3000');
+});
